@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lukkari-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Viikki_Lukkari" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-gp-0kf">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="l3z-f4-Ioo">
+                                    <size key="itemSize" width="63" height="63"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="IOX-vU-EfK" customClass="MyCollectionViewCell" customModule="Viikki_Lukkari" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="66" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-q2-W8a">
+                                                    <frame key="frameInset" minY="2" width="66" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="66" height="60"/>
+                                        <connections>
+                                            <outlet property="myLabel" destination="Fg7-q2-W8a" id="YnZ-Am-dRB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="oPX-pA-56w"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="aEu-J7-Jee"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KoN-gp-0kf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bjC-iZ-wvl"/>
+                            <constraint firstAttribute="trailing" secondItem="KoN-gp-0kf" secondAttribute="trailing" id="cKV-Ql-6se"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="KoN-gp-0kf" secondAttribute="bottom" id="dYu-Vk-14L"/>
+                            <constraint firstItem="KoN-gp-0kf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="uSV-jH-8WC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lukkari" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="gridView" destination="KoN-gp-0kf" id="eG7-QW-ax8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="JGd-9J-I7o" kind="relationship" relationship="viewControllers" id="zYl-Bf-hSL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="JZF-QM-HHC">
+            <objects>
+                <navigationController id="JGd-9J-I7o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Edit" image="second" id="8cb-0x-d0Z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tfD-zb-8YB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="R9d-Sh-Jru" kind="relationship" relationship="rootViewController" id="Zkm-Ft-2rf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZ4-ne-p25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="378"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="s8S-Hc-E1k">
+            <objects>
+                <viewController id="R9d-Sh-Jru" customClass="EditViewController" customModule="Viikki_Lukkari" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XDU-HR-cfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Us2-G7-W3f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jjq-st-JEx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zC2-6N-PUk">
+                                <frame key="frameInset" minX="16" minY="564" width="343" height="46"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Add New Lukkari">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="b76-oE-VQd" kind="show" id="GPu-Wy-agY"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vhg-9O-KMD">
+                                <frame key="frameInset" minX="16" minY="528" width="343" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changePeriod:" destination="R9d-Sh-Jru" eventType="valueChanged" id="kC9-Yb-Pi3"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWx-uQ-MT7">
+                                <frame key="frameInset" minX="16" minY="72" width="343" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="R9d-Sh-Jru" id="OGR-PR-Ntl"/>
+                                    <outlet property="delegate" destination="R9d-Sh-Jru" id="Iem-eA-fH5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zC2-6N-PUk" firstAttribute="trailing" secondItem="Jjq-st-JEx" secondAttribute="trailingMargin" id="4TL-IC-vqN"/>
+                            <constraint firstItem="MWx-uQ-MT7" firstAttribute="top" secondItem="XDU-HR-cfZ" secondAttribute="bottom" constant="8" id="6bX-SG-Vr4"/>
+                            <constraint firstItem="vhg-9O-KMD" firstAttribute="trailing" secondItem="Jjq-st-JEx" secondAttribute="trailingMargin" id="BjS-lQ-iXW"/>
+                            <constraint firstItem="MWx-uQ-MT7" firstAttribute="leading" secondItem="Jjq-st-JEx" secondAttribute="leadingMargin" id="Wj5-bP-zJS"/>
+                            <constraint firstItem="zC2-6N-PUk" firstAttribute="top" secondItem="vhg-9O-KMD" secondAttribute="bottom" constant="8" id="aAe-WN-z8M"/>
+                            <constraint firstItem="zC2-6N-PUk" firstAttribute="leading" secondItem="Jjq-st-JEx" secondAttribute="leadingMargin" id="eGy-JG-qwb"/>
+                            <constraint firstItem="MWx-uQ-MT7" firstAttribute="trailing" secondItem="Jjq-st-JEx" secondAttribute="trailingMargin" id="gdm-WW-jJQ"/>
+                            <constraint firstItem="vhg-9O-KMD" firstAttribute="top" secondItem="MWx-uQ-MT7" secondAttribute="bottom" constant="8" id="ozo-Vi-3iA"/>
+                            <constraint firstItem="Us2-G7-W3f" firstAttribute="top" secondItem="zC2-6N-PUk" secondAttribute="bottom" constant="8" id="ry2-Xe-tBE"/>
+                            <constraint firstItem="vhg-9O-KMD" firstAttribute="leading" secondItem="Jjq-st-JEx" secondAttribute="leadingMargin" id="skS-Hz-erS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cc2-qr-tIN"/>
+                    <connections>
+                        <outlet property="button" destination="zC2-6N-PUk" id="2O6-kc-HkA"/>
+                        <outlet property="lukkaritList" destination="MWx-uQ-MT7" id="C1z-HR-vdm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dc4-Rz-9jV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="375.56221889055473"/>
+        </scene>
+        <!--Add Some Stuff-->
+        <scene sceneID="fcP-Bw-L1K">
+            <objects>
+                <viewController id="b76-oE-VQd" customClass="AddViewController" customModule="Viikki_Lukkari" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2uk-yg-iq4"/>
+                        <viewControllerLayoutGuide type="bottom" id="b8t-G5-4xe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AGi-Vy-igp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Het-XL-Ep4">
+                                <segments>
+                                    <segment title="Ykköset"/>
+                                    <segment title="Kakkoset"/>
+                                    <segment title="Abit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="gradeChanged:" destination="b76-oE-VQd" eventType="valueChanged" id="T5N-mH-eSx"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-Qr-04W">
+                                <connections>
+                                    <outlet property="dataSource" destination="b76-oE-VQd" id="18t-bv-KKW"/>
+                                    <outlet property="delegate" destination="b76-oE-VQd" id="XGu-8z-ykJ"/>
+                                </connections>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hQl-qx-SUf">
+                                <frame key="frameInset" minX="16" minY="385" width="343" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="b76-oE-VQd" id="scb-Xr-Cne"/>
+                                    <outlet property="delegate" destination="b76-oE-VQd" id="o0c-MV-xit"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXO-y8-7I2">
+                                <frame key="frameInset" minX="16" minY="332" width="343" height="45"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCourse:" destination="b76-oE-VQd" eventType="touchUpInside" id="dP3-e5-P8T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b8t-G5-4xe" firstAttribute="top" secondItem="hQl-qx-SUf" secondAttribute="bottom" constant="8" id="0W7-rw-2Jm"/>
+                            <constraint firstItem="Het-XL-Ep4" firstAttribute="top" secondItem="2uk-yg-iq4" secondAttribute="bottom" constant="8" id="72c-f2-nLJ"/>
+                            <constraint firstItem="nmf-Qr-04W" firstAttribute="leading" secondItem="AGi-Vy-igp" secondAttribute="leading" id="GNV-eI-2ph"/>
+                            <constraint firstItem="Het-XL-Ep4" firstAttribute="leading" secondItem="AGi-Vy-igp" secondAttribute="leadingMargin" id="Hp4-WD-PAN"/>
+                            <constraint firstItem="hQl-qx-SUf" firstAttribute="leading" secondItem="AGi-Vy-igp" secondAttribute="leadingMargin" id="KiX-mE-hRo"/>
+                            <constraint firstItem="FXO-y8-7I2" firstAttribute="trailing" secondItem="AGi-Vy-igp" secondAttribute="trailingMargin" id="M5u-uP-PSZ"/>
+                            <constraint firstItem="nmf-Qr-04W" firstAttribute="top" secondItem="Het-XL-Ep4" secondAttribute="bottom" constant="8" id="bd9-10-fhY"/>
+                            <constraint firstAttribute="trailing" secondItem="nmf-Qr-04W" secondAttribute="trailing" id="eiI-Q1-pw8"/>
+                            <constraint firstItem="hQl-qx-SUf" firstAttribute="trailing" secondItem="AGi-Vy-igp" secondAttribute="trailingMargin" id="kZj-nh-Eht"/>
+                            <constraint firstItem="hQl-qx-SUf" firstAttribute="top" secondItem="FXO-y8-7I2" secondAttribute="bottom" constant="8" id="ocb-r1-RYz"/>
+                            <constraint firstItem="Het-XL-Ep4" firstAttribute="trailing" secondItem="AGi-Vy-igp" secondAttribute="trailingMargin" id="qBF-N3-vcR"/>
+                            <constraint firstItem="FXO-y8-7I2" firstAttribute="leading" secondItem="AGi-Vy-igp" secondAttribute="leadingMargin" id="tRE-5F-zYa"/>
+                            <constraint firstItem="FXO-y8-7I2" firstAttribute="top" secondItem="nmf-Qr-04W" secondAttribute="bottom" constant="8" id="vKc-k3-AKx"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Some Stuff" id="eN1-TD-KJb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="qa5-1b-F60">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="b76-oE-VQd" id="KE9-dl-N2C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="coursePickerTool" destination="nmf-Qr-04W" id="Zhs-5o-gr9"/>
+                        <outlet property="outputForCourses" destination="hQl-qx-SUf" id="huK-bY-3je"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2c1-Ui-EyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="375.56221889055473"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
